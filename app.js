@@ -19,6 +19,11 @@ function callbackFunc(data) {
 
 getNasaData("2013-03-23", callbackFunc);
 
+$('form').on('click', 'button', function(e) {
+    var date = new Date($('#date-input').val());
+    console.log(date);
+
+  });
 
 
 
