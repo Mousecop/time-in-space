@@ -103,11 +103,52 @@ $(function eventHandler() {
     });
     // New Date button handler
     $('.newDate').click(function(event) {
+<<<<<<< HEAD
         // Change the true/false state of app state keys
         modKeyState('newDate');
         modKeyState('datePicker');
         modKeyState('submitButton');
         renderState(appState, $('html'));
         $('p').remove('.information'); // Remove photo description
+||||||| merged common ancestors
+        modKeyState('newDate');
+        modKeyState('datePicker');
+        modKeyState('submitButton');
+        renderState(appState, $('html'));
+        $('p').remove('.information');
+=======
+      $('.info').slideUp('slow');
+      $('.info').slideDown('slow');
+      modKeyState('newDate');
+      modKeyState('datePicker');
+      modKeyState('submitButton');
+      renderState(appState, $('html'));
+      $('p').remove('.information');
+
+>>>>>>> d5dc8327216afeaaf97b649932fd03593e89f5c1
     });
 });
+
+
+
+/*
+Maybe how we can implement slideshow?
+$(document).ready(function() {
+    var _intervalId;
+
+    function fadeInLastImg()
+    {
+        var backImg = $('.container img:first');
+        backImg.hide();
+        backImg.remove();
+        $('.container' ).append( backImg );
+        backImg.fadeIn()
+    };
+
+    _intervalId = setInterval( function() {
+        fadeInLastImg();
+    }, 1000 );
+
+});
+credit: http://stackoverflow.com/questions/13026963/loop-through-images
+ */
