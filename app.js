@@ -100,3 +100,27 @@ $(function eventHandler() {
         $('p').remove('.information');
     });
 });
+
+
+
+/*
+Maybe how we can implement slideshow?
+$(document).ready(function() {
+    var _intervalId;
+
+    function fadeInLastImg()
+    {
+        var backImg = $('.container img:first');
+        backImg.hide();
+        backImg.remove();
+        $('.container' ).append( backImg );
+        backImg.fadeIn()
+    };
+
+    _intervalId = setInterval( function() {
+        fadeInLastImg();
+    }, 1000 );
+
+});
+credit: http://stackoverflow.com/questions/13026963/loop-through-images
+ */
