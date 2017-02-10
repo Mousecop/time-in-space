@@ -103,29 +103,15 @@ $(function eventHandler() {
     });
     // New Date button handler
     $('.newDate').click(function(event) {
-<<<<<<< HEAD
-        // Change the true/false state of app state keys
-        modKeyState('newDate');
-        modKeyState('datePicker');
-        modKeyState('submitButton');
-        renderState(appState, $('html'));
-        $('p').remove('.information'); // Remove photo description
-||||||| merged common ancestors
-        modKeyState('newDate');
-        modKeyState('datePicker');
-        modKeyState('submitButton');
-        renderState(appState, $('html'));
-        $('p').remove('.information');
-=======
       $('.info').slideUp('slow');
       $('.info').slideDown('slow');
+      // Change the true/false state of app state keys
       modKeyState('newDate');
       modKeyState('datePicker');
       modKeyState('submitButton');
       renderState(appState, $('html'));
-      $('p').remove('.information');
+      $('p').remove('.information');  // remove the photo description
 
->>>>>>> d5dc8327216afeaaf97b649932fd03593e89f5c1
     });
 });
 
