@@ -25,7 +25,6 @@ function getNasaData(searchTerm, callback) {
 
 function callbackFunc(data) {
     appState.dataArr[0] = data;
-    console.log(data);
     renderState(appState, $('html'));
 }
 
@@ -93,11 +92,14 @@ $(function eventHandler() {
     });
 
     $('.newDate').click(function(event) {
-        modKeyState('newDate');
-        modKeyState('datePicker');
-        modKeyState('submitButton');
-        renderState(appState, $('html'));
-        $('p').remove('.information');
+      $('.info').slideUp('slow');
+      $('.info').slideDown('slow');
+      modKeyState('newDate');
+      modKeyState('datePicker');
+      modKeyState('submitButton');
+      renderState(appState, $('html'));
+      $('p').remove('.information');
+
     });
 });
 
