@@ -3,5 +3,11 @@
 }
 
 .information {
-  color: white;
+  color: #fff;
+}
+
+.info {
+  background-color: rgba(0,0,0,.43);
+  position: fixed;
+  bottom: 0;
 }
