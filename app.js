@@ -25,7 +25,22 @@ function getNasaData(searchTerm, callback) {
 
 function callbackFunc(data) {
     appState.dataArr[0] = data;
+    console.log(data);
     renderState(appState, $('html'));
+}
+
+function dateCompare(date) {
+  var selectedDate = date.slice(0,4) + date.slice(5,7) + date.slice(8);
+  var today = new Date();
+  var currentDate = today.getFullYear().toString() + '0' +
+   (today.getMonth()+1).toString() + today.getDate().toString();
+  if (selectedDate > currentDate) {
+    return 0;
+  } else if (selectedDate < 19950617) {
+    return 1;
+  } else {
+    return 2;
+  }
 }
 
 function modKeyState(key) {
@@ -33,7 +48,7 @@ function modKeyState(key) {
 }
 
 function checkState(key) {
-    (appState[key]) ? $('.' + key).show() : $('.' + key).hide();
+    appState[key] ? $('.' + key).show() : $('.' + key).hide();
 }
 
 function moreInfo(state, element) {
@@ -55,11 +70,19 @@ $(function eventHandler() {
     $('form').submit(function(e) {
         e.preventDefault();
         var date = $('#date-input').val();
-        getNasaData(date, callbackFunc);
-        $('.title').hide();
-        modKeyState('infoButton');
-        modKeyState('submitButton');
-        modKeyState('datePicker');
+        var comparedDates = dateCompare(date);
+        if (comparedDates === 0) {
+          alert('Date selected is in the future');
+        } else if (comparedDates === 1) {
+          alert('There are no APODs before 6/17/1995')
+        } else {
+          getNasaData(date, callbackFunc);
+          $('.title').hide();
+          modKeyState('infoButton');
+          modKeyState('submitButton');
+          modKeyState('datePicker');
+        }
+
     });
 
     $('.infoButton').click(function(event) {
