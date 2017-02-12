@@ -12,7 +12,7 @@ var appState = { // Application state object
         "url": "http://apod.nasa.gov/apod/image/1702/PIA20522enceladusC.jpg"
     }],
     // Keys for page elements to manage state.
-    datePicker: true,
+    datePicker: true, // pick names that describe the state of the property
     submitButton: true,
     infoButton: false,
     newDate: false
@@ -137,4 +137,7 @@ $(document).ready(function() {
 
 });
 credit: http://stackoverflow.com/questions/13026963/loop-through-images
+
+
+Maybe add resetState function.
  */
