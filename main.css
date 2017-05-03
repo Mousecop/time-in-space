@@ -6,7 +6,7 @@ body {
   margin: 10px 0px 0px 0px;
 }
 
-.title {
+.title, .description {
   color: #fff;
 }
 
@@ -35,7 +35,7 @@ body {
   height: 90px;
 }
 
-.title, .dateForm {
+.title, .dateForm, .description {
   text-align: center;
 }
 

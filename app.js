@@ -86,7 +86,8 @@ $(function eventHandler() {
           alert('There are no APODs before 6/17/1995')
         } else {
           getNasaData(date, callbackFunc);
-          $('.title').hide(); // Hide page title
+          $('.title').hide();// Hide page title
+          $('.description').hide(); 
           // Change the true/false state of app state keys
           modKeyState('infoButton');
           modKeyState('submitButton');
