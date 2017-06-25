@@ -4,10 +4,22 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      if ($('#date-input').type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+        $('#date-input').datepicker();
+      }
+    </script>
   </head>
   <body>
     <header>
-      <h1 class="title">Time in Space</h1><
+      <h1 class="title">Time in Space</h1>
       <p class="description">Pick a date to see a beautiful picture taken by NASA</p>
     </header>
     <form class="dateForm">
@@ -17,11 +29,6 @@
     <button type="button" class="infoButton">Show Info</button>
     <div class="info"></div>
     <button type="button" class="newDate">Select new date</button>
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.js"
-      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-      crossorigin="anonymous">
-    </script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
